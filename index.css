@@ -18,6 +18,7 @@ main{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    gap: 8px;
 }
 #nav-toggle{
     height: 5rem;
@@ -51,15 +52,16 @@ main{
     font-size: 2rem;
     opacity: 0;
     transition: 0.4s ease;
-}
-nav {
+   }
+
+  nav {
     height: 50%;
     width: 100%;
     position: absolute;
     left: 0px;
     bottom: 0px;
     z-index: 1;
-    overflow: hidden;
+   
   }
   #nav-links {  
     display: flex;
@@ -68,8 +70,9 @@ nav {
     padding: 0rem clamp(1rem, 2vw, 2rem);
     transform: translateY(70%) scale(0.9);
     transition: transform 0.5s cubic-bezier(.13,.53,.38,.97); 
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow-x: auto;
+    padding-bottom: 1rem;
   } 
 
   
@@ -101,11 +104,11 @@ nav {
   }
   .main-col{
     position: relative;
-   display: flex;
-   flex-direction: column;
-   width: 24%;
-   gap: 15px;
-   height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 8px;
+    min-height: 99vh;
   }
   .main-col > .main-col-image {
     aspect-ratio: 1 / 1.8;
@@ -136,4 +139,14 @@ nav {
     background-color: darkgrey;
     outline: 1px solid slategrey;
     border-radius: 1rem;
+  }
+   #nav-links::-webkit-scrollbar {
+    height: 2px;
+  }
+   
+   #nav-links::-webkit-scrollbar-thumb {
+    background-color: #1FC5A8;
+    height: 4px;
+    border-radius: 4px;
+    padding-top: 5rem;
   }
